@@ -53,4 +53,21 @@ describe("Alerts", () => {
     cy.on("window:prompt", () => false); //  cancel yapmak istersek "you clicked: null" asagı koda ekle
     cy.get("#result").should("have.text", "You clicked: welcome");
   });
+  it.only("Authenticated alert",()=>{
+    //!methof one
+    cy.visit("https://the-internet.herokuapp.com/basic_auth",{auth:{
+        username:"admin",
+        password : "admin"
+      }})
+      cy.get("div[class='example'] p").should('have.contain',"Congratulations")
+  })
+     //!method two
+     /* cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth")
+      cy.get("div[class='example'] p").should(
+        "have.contain",
+        "Congratulations"
+      ); */
+
 });
+
+ 
