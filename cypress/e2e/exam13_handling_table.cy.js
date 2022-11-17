@@ -13,19 +13,30 @@ describe('Handle Tables',()=>{
 
 
     })
-    it.only('check number of rows and columns',()=>{
+    it.skip('check number of rows and columns',()=>{
         cy.get("table[class='table table-bordered table-hover']>tbody>tr").should('have.length','10')
         cy.get(
           "table[class='table table-bordered table-hover']>thead>tr>td"
         ).should("have.length", "7");
 
     })
-    it('check cell data from specific row and column',()=>{
+    it.skip('check cell data from specific row and column',()=>{
         cy.get(
           "table[class='table table-bordered table-hover']>tbody>tr:nth-child(7)>td:nth-child(3)"
         ).contains("pr@yopmail.com");
         cy.get(
           "table[class='table table-bordered table-hover']>tbody>tr:nth-child(3)>td:nth-child(2)"
         ).contains("!Goran Krezic!");
+    })
+
+    it.only('read all the rows & columns data in the first page',()=>{
+      cy.get("table[class='table table-bordered table-hover']>tbody>tr")
+        .each(($row,index,$rows)=>{
+          cy.wrap($row).within(()=>{
+            cy.get("td").each(($col, index, $cols)=>{
+              cy.log($col.text())
+            });
+          })
+        })
     })
 })
