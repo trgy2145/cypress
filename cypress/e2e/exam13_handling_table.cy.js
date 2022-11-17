@@ -29,14 +29,56 @@ describe('Handle Tables',()=>{
         ).contains("!Goran Krezic!");
     })
 
-    it.only('read all the rows & columns data in the first page',()=>{
+    it.skip('read all the rows & columns data in the first page',()=>{
       cy.get("table[class='table table-bordered table-hover']>tbody>tr")
-        .each(($row,index,$rows)=>{
-          cy.wrap($row).within(()=>{
-            cy.get("td").each(($col, index, $cols)=>{
+        .each(($row,index,$rows)=>{  //! all rows
+          cy.wrap($row).within(()=>{ //! every row
+            cy.get("td").each(($col, index, $cols)=>{  //! all columns every row
               cy.log($col.text())
             });
           })
         })
     })
+    it.only('pagination',()=>{
+      //! find out number of pages
+      /* let totalPages;
+      cy.get(".col-sm-6.text-end").then((e) => {
+        let mytext = e.text(); //! Showing 1 to 10 of (559 Pages)  burdan  559 u almamız gerekiyor
+        totalPages = mytext.substring(
+          mytext.indexOf("(") + 1,
+          mytext.indexOf("Pages") - 1
+        ); //! start ve end indexi belittik böylece 559 u aldık
+        cy.log("total pages ========>" + totalPages);
+      }); */
+
+      let totalPages=5;
+      for (let p = 1; p <= totalPages; p++) {
+        cy.log("active page =======>" + p);
+        cy.get("ul[class='pagination']>li:nth-child(" + p + ")").click();
+        cy.get("table[class='table table-bordered table-hover']>tbody>tr")
+        .each(($row,index,$rows)=>{  //! all rows
+          cy.wrap($row).within(()=>{ //! every row
+            cy.get('td:nth-child(3)').then((e)=>{  //! all columns every row
+              cy.log(e.text())
+            });
+          })
+        })
+        cy.get(3000)
+
+
+
+      }
+        
+    })
+
+       
+      
+     
+
+    
+    
+    
+
+       
+    
 })
