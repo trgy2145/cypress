@@ -1,6 +1,7 @@
 import 'cypress-iframe'
 import "@4tw/cypress-drag-drop";
 
+
 describe("Mouse Operations",()=>{
     it("MouseHover",()=>{
         cy.visit("https://demo.opencart.com/");
@@ -50,7 +51,7 @@ describe("Mouse Operations",()=>{
         .find("#field2")
         .should("have.value", "Hello World!");
     })
-    it.only('Drag an Drop  using plugin',()=>{
+    it('Drag an Drop  using plugin',()=>{
         //! npm den plugin indir
         cy.visit(
           "http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html"
@@ -61,5 +62,16 @@ describe("Mouse Operations",()=>{
         cy.get("#box6").drag("#box106",{force:true}) 
 
 
+    })
+    it.only('scroling page',()=>{
+        cy.visit("https://www.countries-ofthe-world.com/flags-of-the-world.html")
+        //! flag location
+        
+        cy.get(
+          "cy.get(':nth-child(1) > tbody > :nth-child(87) > :nth-child(1) > img')"
+        ).scrollIntoView({duration:2000})
+         cy.get(
+           "cy.get(':nth-child(1) > tbody > :nth-child(87) > :nth-child(1) > img')"
+         ).should('be.visible')
     })
 })
