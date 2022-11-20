@@ -1,0 +1,92 @@
+By the help of JDBC API  = jdbc yardımıyla
+speaking of movies = film demişken
+It is based on
+we're going to take a look at JDBC
+as long as proper drivers are provided.
+a particular type
+The most commonly used type
+before obtaining a connection, 
+ we will have to create the database and a user,
+when it  comes to size and tranparency
+by enabling
+The benefit of using only POJOs
+leave the rest to component scanning.
+corresponding = karsılık gelen
+whereas=halbuki
+hence=buradan
+it was not possible to 
+with respect to return type.
+A common misconception about =genel yanlıs kanı ...
+to dispose = elden cıkarmak
+eligible
+aware of
+henceforth = from now on
+An instance of an inner class cannot be created without an instance of the outer class.  NOT 
+concise = özlü
+we don’t have to bother about the data
+Now you must be wondering that 
+
+The following are major differences between static nested classes and inner classes.   NOT
+
+1)  A static nested class may be instantiated without instantiating its outer class.
+2) Inner classes can access both static and non-static members of the outer class. 
+A static class can access only the static members of the outer class.
+
+Das Virus ist zuerst in dem Land China entdeckt worden, weil dort viele Menschen krank geworden sind. 
+
+
+startle =korkmak ===> ı was so startled==> ödüm koptu..
+stinger = arı iğnesi
+gruesome =vahsice , ripped =yırtık , sökük ==> ı ripped their legs in a gruesome way...
+butchered =kesmek, katletmek
+skinning= deriyi yüzmek
+
+brace =  hazırlamak, zindelestirmek
+vast =büyük caplı
+hit the ground = yere inmek
+embrace = kucaklamak
+
+genuinely = gercekten , samimi
+as a whole = bütün olarak
+intimate = samimi , icten
+mourning = yas
+turmoil = kargasa
+griev= büyük acı
+viewfinder = mercek
+wipe away = silip süpürmek
+drained = tükenmişlik
+casket = tabut
+memorial service =anma töreni
+welling up =  iyilesmek
+pleas =yakarişlar
+extract = alıntı,cıkarım
+counterpart=akran,muadil
+solidarity = yalnızlık
+birthed out of mental marching =mental yürüşten ortaya cıkma
+narrative = hikaye
+visually = görsel olarak
+downtown = sehir merkezi
+the fact that =  su gerceği ki
+on how ... su konuda konusan
+cannot help kendini alamamak 
+sight after fiilin 3. hali sought after = fiil 3 hali olunca sıfat olur arzu edilen anlamında
+
+come to fruition = murada ermek
+now more than ever = her zamankinden daha fazla
+enhacement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
