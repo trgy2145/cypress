@@ -12,4 +12,9 @@ describe('Custom commands',()=>{
           "Apple MacBook Pro 13-inch"
         );
     })
+    it.only('Login App',()=>{
+        cy.visit("https://demo.nopcommerce.com/");
+        cy.clickLink("Log in")
+        cy.loginApp("test@gmail.com","test123")
+    })
 })
